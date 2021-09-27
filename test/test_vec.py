@@ -7,7 +7,7 @@ class Test_nlp(unittest.TestCase):
         self.assertEqual(vec.word2vect("hello"), "h")    
         
     def test_word(self):
-        self.assertEqual(vec.word(), "hello")   
+        self.assertEqual(vec.word(), "hello") 
 
 if __name__ == '__main__':
     unittest.main()
