@@ -37,21 +37,34 @@ class Vectorize_GloVe:
                 
         Returns:
         ----------
-            
+            The average of word vectors in sentences. If no corresponding vectors are found, the sentence is ignores. 
         
         """
         
         
-        
-        X = np.zeros(len(data), self.D)
+        X = np.zeros((len(data), self.D))
         n = 0
         empty = 0
         
         for sentence in data:
-            token = sentence.lower().split()
+            tokens = sentence.lower().split()
             vecs = []
-            # word in token:
-            #   if word in 
+            for word in tokens:
+                if word in self.word2vec:
+                    vec = self.word2vec[word]
+                    vecs.append(vec)
+            if len(vecs) > 0:
+                vecs = np.array(vecs)
+                X[n] = vecs.mean(axis=0) # average in vertical direction. 
+            else:
+                empty += 1
+            n += 1
+        print("No. no words found {}/{}".format(empty, len(data)))
+        return X
+                    
+    def fit_transform(self, data):
+        self.fit(data)
+        return self.transform(data)
 
 
 def word2vect(sentences):

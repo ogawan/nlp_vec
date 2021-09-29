@@ -24,3 +24,7 @@ Run the app:
 ```bash
 python app.py
 ```
+
+## References
+
+[Natural language processing 2](https://github.com/lazyprogrammer/machine_learning_examples/blob/master/nlp_class2/bow_classifier.py) by Lazyprogrammer
