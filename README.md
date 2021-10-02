@@ -1,4 +1,4 @@
-# nlp_vecs
+# nlp_vec
 
 ## About this repo
 
