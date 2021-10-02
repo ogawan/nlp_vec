@@ -19,11 +19,16 @@ word2vec
 ```bash
 wget -c "https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz"
 ```
+Unzip
+
+```bash
+gunzip GoogleNews-vectors-negative300.bin.gz 
+```
 
 GloVe
 
 ```bash
-https://nlp.stanford.edu/data/glove.6B.zip
+wget -c https://nlp.stanford.edu/data/glove.6B.zip
 ```
 Install dependencies:
 
