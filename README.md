@@ -9,7 +9,7 @@ This repo has codes for following functions:
 
 ## How to run this app
 
-First, clone this repository and open a terminal inside the folder. t
+First, clone this repository and open a terminal inside the folder. 
 
 
 Install pretrained vectors:
