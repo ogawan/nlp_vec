@@ -1,4 +1,5 @@
 import numpy as np
+from gensim.models import KeyedVectors
 
 class Vectorize_GloVe:
     
@@ -72,3 +73,59 @@ def word2vect(sentences):
 
 def word():
     return "hello"
+
+class Vectorize_word2vec:
+    
+    def __init__(self):
+        self.word_vectors = KeyedVectors.load_word2vec_format(
+              '/work/data/word2vec/GoogleNews-vectors-negative300.bin',
+            binary=True
+        ) 
+        self.word_not_found = []
+        
+    def fit(self, data):
+        pass
+    
+    def transform(self, data):
+        v = self.word_vectors.get_vector('king')
+        self.D = v.shape[0]
+        
+        
+        X = np.zeros((len(data), self.D))
+        n = 0
+        empty = 0
+        for sentence in data:
+            tokens = sentence.split()
+            vecs = []
+            m = 0
+            for word in tokens:
+                try:
+                    vec = self.word_vectors.get_vector(word)
+                    vecs.append(vec)
+                    m += 1
+                except KeyError:
+                    # Store words that are not found
+                    self.word_not_found.append(word)
+                    pass
+                                               
+            if len(vecs) > 0:
+                vecs =  np.array(vecs)
+                X[n] = vecs.mean(axis=0)
+            else:
+                empty += 1
+            n += 1
+        return X           
+    
+    def fit_tansform(self, data):
+        self.fit(data)
+        return self.transform(data)
+        
+                                           
+                                               
+                
+            
+                    
+                    
+                    
+            
+        

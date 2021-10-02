@@ -12,7 +12,20 @@ This repo has codes for following functions:
 First, clone this repository and open a terminal inside the folder. 
 
 
-Install the requirements:
+Install pretrained vectors:
+
+word2vec
+
+```bash
+wget -c "https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz"
+```
+
+GloVe
+
+```bash
+https://nlp.stanford.edu/data/glove.6B.zip
+```
+Install dependencies:
 
 ```bash
 
@@ -27,4 +40,4 @@ python app.py
 
 ## References
 
-[Natural language processing 2](https://github.com/lazyprogrammer/machine_learning_examples/blob/master/nlp_class2/bow_classifier.py) by Lazyprogrammer
+The implmentation for word embedding is minor modification from [Natural language processing 2](https://github.com/lazyprogrammer/machine_learning_examples/blob/master/nlp_class2/bow_classifier.py) by [Lazyprogrammer](https://lazyprogrammer.me/)
