@@ -87,6 +87,22 @@ class Vectorize_word2vec:
         pass
     
     def transform(self, data):
+        
+        """
+        This is a function to transform data into word2vec vectors. 
+        
+        Parameter:
+        -----------
+            data: list, numpy array
+                List or numpy array where each element is a sentence. Perhaps, you need to split the text by period(0). Also, this vectorization is insensitive to case. 
+                
+        Returns:
+        ----------
+            The average of word vectors in sentences. If no corresponding vectors are found, the sentence is ignores. 
+        
+        """
+        
+        
         v = self.word_vectors.get_vector('king')
         self.D = v.shape[0]
         
@@ -116,7 +132,7 @@ class Vectorize_word2vec:
             n += 1
         return X           
     
-    def fit_tansform(self, data):
+    def fit_transform(self, data):
         self.fit(data)
         return self.transform(data)
         
