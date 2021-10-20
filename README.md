@@ -4,9 +4,10 @@
 
 This repo has codes for following functions:
 1) Vectorize sentences using standard word embedding such as GloVe and word2vec. 
-2) Fine-tune large pre-trained language models using scientific data. 
-3) Fine-tune BERT model. 
-4) Text similarity search engine based on cosine similarity and euclidean distances. 
+2) Build word2vec from scratch using negative sampling and skip-gram
+3) Fine-tune large pre-trained language models using scientific data. 
+4) Fine-tune BERT model. 
+5) Text similarity search engine based on cosine similarity and euclidean distances. 
 
 ## References
 
