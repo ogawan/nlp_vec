@@ -16,6 +16,8 @@ The implmentation for using pre-trained word embedding is minor modification fro
 The implmentation of word2vec (skip-gram with negative sampling) is minor modification from [deep_learning_NLP](https://github.com/Tixierae/deep_learning_NLP/blob/master/skipgram/sg_d2v_numpy.ipynb) by 
 [Tixierae](https://github.com/Tixierae)
 
+Information retrievel using [word2vec](https://www.analyticsvidhya.com/blog/2020/08/information-retrieval-using-word2vec-based-vector-space-model/#h2_13)
+
 ## How to run this app
 
 First, clone this repository and open a terminal inside the folder. 
