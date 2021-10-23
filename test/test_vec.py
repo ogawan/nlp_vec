@@ -25,6 +25,6 @@ class Test_nlp(unittest.TestCase):
         vecs =  word2vec_vectorizer.fit_transform(["This is an apple", "I am orange boy with a pineapple", "Fat elephant", "organic chemistry", "Fuji mountain", "Megane TRPV1", "FGHSRHG$%&YEHDRT"])
         self.assertEqual((vecs == np.load(path)).all(), True) 
 
-        
+
 if __name__ == '__main__':
     unittest.main()
